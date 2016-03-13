@@ -24,11 +24,12 @@ scalacOptions ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-  "org.scalaz" %% "scalaz-core" % "7.2.0",
-  "org.scalaz" %% "scalaz-concurrent" % "7.2.0",
+  "org.scalaz" %% "scalaz-core" % "7.2.1",
+  "org.scalaz" %% "scalaz-concurrent" % "7.2.1",
   "org.tpolecat" %% "doobie-core" % "0.2.3",
   "io.argonaut" %% "argonaut" % "6.1",
   "org.scalaz.stream" %% "scalaz-stream" % "0.8",
   "com.lihaoyi" %% "pprint" % "0.3.8",
-  "com.lihaoyi" %% "fastparse" % "0.3.4"
+  "com.lihaoyi" %% "fastparse" % "0.3.7",
+  "org.jsoup" % "jsoup" % "1.8.3"
 )
