@@ -1,6 +1,6 @@
 name := "scala_repl_template"
 
-scalaVersion := "2.11.7"
+scalaVersion := "2.11.8"
 
 version := "0.1"
 
@@ -13,12 +13,15 @@ scalacOptions ++= Seq(
   "-language:implicitConversions",
   "-unchecked",
   "-Xfatal-warnings",
-  "-Xlint",
+  "-Xlint:_",
   "-Yno-adapted-args",
   "-Ywarn-dead-code",        // N.B. doesn't work well with the ??? hole
   "-Ywarn-numeric-widen",
   "-Ywarn-value-discard",
-  "-Xfuture"
+  "-Xfuture",
+  "-Ybackend:GenBCode",
+  "-Ydelambdafy:method",
+  "-target:jvm-1.8"
   // very annoying in the REPL
   //"-Ywarn-unused-import"     // 2.11 only
 )
@@ -31,5 +34,6 @@ libraryDependencies ++= Seq(
   "org.scalaz.stream" %% "scalaz-stream" % "0.8",
   "com.lihaoyi" %% "pprint" % "0.3.8",
   "com.lihaoyi" %% "fastparse" % "0.3.7",
-  "org.jsoup" % "jsoup" % "1.8.3"
+  "org.jsoup" % "jsoup" % "1.8.3",
+  "org.scala-lang.modules" % "scala-java8-compat_2.11" % "0.7.0"
 )
